@@ -1,0 +1,70 @@
+<form (submit)="getPersonById(idd)">
+    <div class="form-group">     
+            <label class="m-2" for="id">Bring Person By Id</label>
+            <input class="m-2" id="id" type="number" #idd />
+        <button >Enviar</button>
+
+    </div>
+</form>
+
+<!-- eL #id es el nombre del input. Es su identificador que luego uso para enviar en el
+formulario el input COMPLETO. -->
+<!-- con id.value obtengo el valor ingresado en el input-->  
+
+<form (submit)="deletePersonById(deleteNumber)">
+    <div class="form-group">
+        <label class="m-2" for="deleteById">Delete Person By Id</label>
+        <input class="m-2" id="deleteById" type="number" #deleteNumber />
+        <button >Eliminar</button>
+    </div>
+</form>
+
+<form (submit)="savePerson()">
+    <div class="form-group">
+        <label class="m-2" for="deleteById">Name</label>
+        <input type="text"  class="m-2" [(ngModel)]="person.name" name="name" placeholder="Name"/>
+        <label class="m-2" for="deleteById">Surname</label>
+        <input type="text" class="m-2"  [(ngModel)]="person.surname" name="surname" placeholder="Surname"/>
+        <label class="m-2" for="deleteById">Street Address</label>
+        <input type="text" class="m-2" [(ngModel)]="person.streetAddress" name="streetAddress" placeholder="streetAddress"/>
+        <label class="m-2" for="deleteById">Address Line 2</label>
+        <input type="text" class="m-2" [(ngModel)]="person.addressLine2" name="addressLine2" placeholder="addressLine2"/>
+        <label class="m-2" for="deleteById">City</label>
+        <input type="text" class="m-2" [(ngModel)]="person.city" name="city" placeholder="city"/>
+        <label class="m-2" for="deleteById">State/Province/Region</label>
+        <input type="text" class="m-2" [(ngModel)]="person.stateProvinceRegion" name="stateProvinceRegion" placeholder="stateProvinceRegion"/>      
+        <label class="m-2" for="deleteById">Email</label>
+        <input type="email" class="m-2" [(ngModel)]="person.email" name="email" placeholder="email"/>
+        <label class="m-2" for="deleteById">Postal Code</label>
+        <input type="number" class="m-2" [(ngModel)]="person.postalZipCode" name="postalZipCode" placeholder="postalZipCode"/>
+        <label class="m-2" for="deleteById">Date of Birth</label>
+        <input type="date" class="m-2" [(ngModel)]="person.dateOfBirth" name="dateOfBirth" placeholder="dateOfBirth"/>
+        <label class="m-2" for="deleteById">Dni</label>
+        <input type="number" class="m-2" [(ngModel)]="person.dni" name="dni" placeholder="dni"/>
+        <label class="m-2" for="sex">Sex</label>
+        <input type="text" class="m-2" [(ngModel)]="person.sex" name="sex" placeholder="sex"/>
+        
+        <label class="m-2" for="mobileNumber">Mobile Number</label>
+        <input type="number" class="m-2" [(ngModel)]="person.mobileNumber" name="mobileNumber" placeholder="mobileNumber"/> 
+        
+        <label class="m-2" for="deleteById">Age</label>
+        <input type="number" class="m-2" [(ngModel)]="person.age" name="age" placeholder="age"/>
+        <button >Agregar</button>
+    </div>
+</form>
+
+<form (submit)="deletePersonById(name)">
+    <input type="text" #name />
+    <button >Nombre</button>
+</form>
+
+ <div class="form-control">{{person.name}}</div>
+ <div class="form-control">{{person.surname}}</div>
+ <div class="form-control">{{person.city}}</div>
+
+
+
+
+
+
+
