@@ -35,7 +35,7 @@ export class PersonServiceService {
   }
 
    savePerson(person:Person): Observable<{}> {
-      console.log(person) 
+      console.log(person ) 
      return this.http.post(this.urlEndPoint + this.urlEndPointSavePerson, person, {headers:this.httpHeaders})
    } 
 
